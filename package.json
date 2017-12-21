@@ -1,0 +1,36 @@
+{
+  "name": "christmas-token",
+  "version": "0.0.0",
+  "description": "The JAAK 2017 Secret Santa Festivities",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sulk --config ./config/contracts.compile.config.js",
+    "test": "test contracts",
+    "deploy": "npm run compile && babel-node ./index",
+    "deploy:dev": "NODE_ENV=development npm run compile && babel-node ./index",
+    "deploy:testet": "NODE_ENV=testnet npm run compile && babel-node ./index",
+    "deploy:prod": "NODE_ENV=production npm run compile && babel-node ./index",
+    "env": "node-repl ./scripts/contract-repl.js"
+  },
+  "keywords": [
+    "Christmas",
+    "Secret",
+    "Santa",
+    "Ethereum",
+    "ERC20",
+    "Solidity"
+  ],
+  "author": "@MrTibbles",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^  7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "chalk": "^2.3.0",
+    "jest": "^22.0.3",
+    "node-repl": "^2.0.2",
+    "sulk": "0.0.5",
+    "web3": "^1.0.0-beta.26"
+  }
+}
